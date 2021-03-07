@@ -1,7 +1,7 @@
 {
   "name": "CheemsBot",
   "description": "[CheemsBot] A modular Telegram userbot running on Python 3.8+ with an sqlalchemy database.",
-  "logo": "#",
+  "logo": "https://telegra.ph/file/bc37e9bbe244bef26bd5b.jpg",
   "keywords": ["telegram", "userbot", "plugin", "modular", "productivity"],
   "repository": "https://github.com/gamerfuckerofficial/CheemsBot",
   "website": "https://kenharris.xyz/userbot.html",
