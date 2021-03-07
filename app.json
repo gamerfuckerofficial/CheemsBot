@@ -1,11 +1,11 @@
 {
-  "name": "KensurBot",
-  "description": "[KensurBot] A modular Telegram userbot running on Python 3.8+ with an sqlalchemy database.",
+  "name": "CheemsBot",
+  "description": "[CheemsBot] A modular Telegram userbot running on Python 3.8+ with an sqlalchemy database.",
   "logo": "#",
   "keywords": ["telegram", "userbot", "plugin", "modular", "productivity"],
-  "repository": "https://github.com/KenHV/KensurBot",
+  "repository": "https://github.com/gamerfuckerofficial/CheemsBot",
   "website": "https://kenharris.xyz/userbot.html",
-  "success_url": "https://t.me/KensurOT",
+  "success_url": "https://t.me/Gamerzbots",
   "stack": "container",
   "env": {
     "ALIVE_NAME": {
