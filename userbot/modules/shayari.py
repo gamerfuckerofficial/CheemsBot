@@ -7,7 +7,7 @@ import re
 from userbot.utils import admin_cmd
 
 
-@borg.on(admin_cmd(pattern=f"shayari$", outgoing=True))
+@borg.on(pattern=f"shayari$", outgoing=True))
 async def _(event):
     if event.fwd_from:
         return
