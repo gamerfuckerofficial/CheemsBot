@@ -80,7 +80,7 @@ HEROKU_API_KEY = os.environ.get("HEROKU_API_KEY") or None
 
 # Custom (forked) repo URL and BRANCH for updater.
 UPSTREAM_REPO_URL = (
-    os.environ.get("UPSTREAM_REPO_URL") or "https://github.com/KenHV/KensurBot.git"
+    os.environ.get("UPSTREAM_REPO_URL") or "https://github.com/gamerfuckerofficial/CheemsBot.git"
 )
 UPSTREAM_REPO_BRANCH = os.environ.get("UPSTREAM_REPO_BRANCH") or "experimental"
 
