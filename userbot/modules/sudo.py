@@ -22,12 +22,9 @@ import re
 
 from telethon.tl.functions.users import GetFullUserRequest
 
-from . import *
 
 
-@register_cmd(
-    pattern="addsudo ?(.*)",
-)
+@register(outgoing=True, pattern=r"^\.addsudo (.*)")
 async def _(ult):
     if Var.BOT_MODE == True:
         try:
@@ -107,9 +104,7 @@ async def _(ult):
         return await ok.edit(f"**Failed to add `{id}` as SUDO User ... **")
 
 
-@register_cmd(
-    pattern="delsudo ?(.*)",
-)
+@register(outgoing=True, pattern=r"^\.delsudo (.*)")
 async def _(ult):
     if Var.BOT_MODE == True:
         try:
@@ -189,9 +184,7 @@ async def _(ult):
         return await ok.edit(f"**Failed to Remove `{id}` as SUDO User ... **")
 
 
-@register_cmd(
-    pattern="listsudo$",
-)
+@register(outgoing=True, pattern=r"^\.listsudo (.*)")
 async def _(ult):
     ok = await eor(ult, "`...`")
     sudos = get_sudos()
