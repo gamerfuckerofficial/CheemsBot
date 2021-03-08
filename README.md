@@ -1,23 +1,12 @@
 # CheemsBot
 
 ```
-#include <std/disclaimer.h>
-/**
-    Your Telegram account may get Kensur-ed.
-    I'm not responsible for any Kensur-ous use of this bot.
-    This bot is intended for having fun as well as helping you
-    efficiently manage groups and automate some boring stuff.
-    Use this bot at your own risk, and use it sensibly.
-    I will not be held accountable if ender1324 spams your PM.
-/**
-```
+#
 
 ## What is it?
 
 CheemsBot is a modular Telegram userbot running on Python 3.8+ with an SQLAlchemy database.
 
-Based on [Paperplane](https://github.com/RaphielGang/Telegram-UserBot) and [ProjectBish](https://github.com/adekmaulana/ProjectBish) userbot.
-I made this fork to cherry-pick some modules I needed. Eventually I started messing with the code and here we are.
 
 ## Setting up
 
@@ -32,4 +21,8 @@ Follow my [channel](https://t.me/Gamerzbots) for updates and join my [group](htt
 
 ## Credits
 
-Huge thanks to [everyone](https://github.com/KenHV/KensurBot/graphs/contributors) who has helped make this userbot awesome!</p>
+## Huge thanks/credits to the respective owners
+
+
+
+
