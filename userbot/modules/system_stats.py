@@ -137,11 +137,9 @@ async def amireallyalive(alive):
               "`Ҝㄚ卂 ᗪ乇Ҝ卄 尺卂卄卂 卄卂| ㄥ卂爪ᗪ乇` \n"
              f"тєℓєтнση νєяѕιση: {version.__version__} \n"
              f"P̳y̳t̳h̳o̳n̳ ̳v̳e̳r̳s̳i̳o̳n̳: {python_version()} \n"
-             f"------------------------------------ \n"
              f"爪ㄚ ㄖ山几乇尺:: {DEFAULTUSER} \n"
              f"𝐑𝐄𝐏𝐎: [𝕮𝕳𝕰𝕰𝕸𝕾𝕭𝕺𝕿](https://github.com/gamerfuckerofficial/CheemsBot) \n"
-             f"ᴄʜᴀɴɴᴇʟ: `[ᴊᴏɪɴ](https://t.me/Gamerzbots)` \n"
-             f"I am I, rest can die")
+             f"ᑕᕼᗩᑎᑎᗴᒪ: [𝕁𝕆𝕀ℕ](https://t.me/Gamerzbots) \n")
     if ALIVE_LOGO:
         try:
             logo = ALIVE_LOGO
