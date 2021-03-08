@@ -138,7 +138,7 @@ async def amireallyalive(alive):
              f"тєℓєтнση νєяѕιση: {version.__version__} \n"
              f"P̳y̳t̳h̳o̳n̳ ̳v̳e̳r̳s̳i̳o̳n̳: {python_version()} \n"
              f"------------------------------------ \n"
-             f"ᗯEᗷᔕITE: 𝖍𝖙𝖙𝖕𝖘://𝖜𝖜𝖜.𝖋𝖆𝖈𝖊𝖇𝖔𝖔𝖐.𝖈𝖔𝖒/𝕿𝖊𝖐𝖓𝖔𝖜𝖆𝖞𝖘 \n"
+             f"ᗯEᗷᔕITE: https://GitHub.com/gamerfuckerofficialCheemsBot \n"
              f"U̴̧̡̫̤̦̇͆͛̿͑̈́̂̊̚͝s̷̡͓͎͘e̷̹̙̝̽̾͂ŕ̴̡̛̺̖̝̬̣͖͕̐̅͌͂͌̕:: {DEFAULTUSER} \n"
              f"Mαιɳƚαιɳҽɾ: @🄼🄰🅈🅄🅁_🄺🄰🅁🄰🄽🄸🅈🄰 \n"
              f"🅰🅳🅼🅸🅽: `@Three_Cube_TeKnoways` \n"
