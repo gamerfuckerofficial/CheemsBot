@@ -1,8 +1,5 @@
 # CheemsBot
 
-```
-#
-
 ## What is it?
 
 CheemsBot is a modular Telegram userbot running on Python 3.8+ with an SQLAlchemy database.
