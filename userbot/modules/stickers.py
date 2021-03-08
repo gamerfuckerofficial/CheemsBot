@@ -103,7 +103,7 @@ async def kang(args):
                 emoji = splat[1]
 
         packname = f"a{user.id}_by_{user.username}_{pack}"
-        packnick = f"@{user.username}'s kang pack Vol.{pack}"
+        packnick = f"@{user.username}'s Vol.{pack}"
         cmd = "/newpack"
         file = io.BytesIO()
 
@@ -135,7 +135,7 @@ async def kang(args):
                 while "120" in x.text:
                     pack += 1
                     packname = f"a{user.id}_by_{user.username}_{pack}"
-                    packnick = f"@{user.username}'s kang pack Vol.{pack}"
+                    packnick = f"@{user.username}'s Vol.{pack}"
                     await args.edit(
                         "**Switching to Pack "
                         + str(pack)
@@ -249,7 +249,7 @@ async def kang(args):
                 await bot.send_read_acknowledge(conv.chat_id)
 
         await args.edit(
-            "**Sticker kanged successfully!**"
+            "**Chura liya hue hue!**"
             f"\nPack can be found [here](t.me/addstickers/{packname})",
             parse_mode="md",
         )
