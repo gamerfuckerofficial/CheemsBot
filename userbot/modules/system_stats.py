@@ -133,7 +133,7 @@ async def pipcheck(pip):
 async def amireallyalive(alive):
     """ For .alive command, check if the bot is running.  """
     logo = ALIVE_LOGO
-    output = ("***CheemsBot Iz Online*** \n\n"
+    output = ("**𝕮𝖍𝖊𝖊𝖒𝖘𝕭𝖔𝖙 𝕴𝖟 𝕺𝖓𝖑𝖎𝖓𝖊** \n"
              f"**тєℓєтнση νєяѕιση: {version.__version__}** \n"
              f"**P̳y̳t̳h̳o̳n̳ ̳v̳e̳r̳s̳i̳o̳n̳: {python_version()}** \n"
              f"**爪ㄚ ㄖ山几乇尺:: {DEFAULTUSER}** \n"
