@@ -1,6 +1,6 @@
 FROM kenhv/kensurbot:alpine
 
-RUN git clone -b experimental https://github.com/gamerfuckerofficial/CheemsBot /root/userbot
+RUN git clone -b Master https://github.com/gamerfuckerofficial/CheemsBot /root/userbot
 RUN chmod 777 /root/userbot
 WORKDIR /root/userbot/
 
