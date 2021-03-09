@@ -6,7 +6,7 @@ Available Commands:
 import asyncio
 
 
-@register.on(slitu.admin_cmd(pattern="gban ?(.*)"))
+@userbot.on(slitu.admin_cmd(pattern="gban ?(.*)"))
 async def _(event):
     if Config.G_BAN_LOGGER_GROUP is None:
         await event.edit("ENV VAR is not set. This module will not work.")
@@ -24,7 +24,7 @@ async def _(event):
     await event.delete()
 
 
-@register.on(slitu.admin_cmd(pattern="ungban ?(.*)"))
+@userbot.on(slitu.admin_cmd(pattern="ungban ?(.*)"))
 async def _(event):
     if Config.G_BAN_LOGGER_GROUP is None:
         await event.edit("ENV VAR is not set. This module will not work.")
