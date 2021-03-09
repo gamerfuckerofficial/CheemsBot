@@ -3,25 +3,25 @@
 # Licensed under the Raphielscape Public License, Version 1.c (the "License");
 # you may not use this file except in compliance with the License.
 #
+# thanks to penn5 for bug fixing
 """ Userbot module for getting information about the server. """
 
 from asyncio import create_subprocess_exec as asyncrunapp
 from asyncio.subprocess import PIPE as asyncPIPE
-from os import remove
 from platform import python_version, uname
 from shutil import which
-
+from os import remove
 from telethon import version
 
-from userbot import ALIVE_NAME, CMD_HELP
+from userbot import CMD_HELP, ALIVE_NAME, ALIVE_LOGO, bot
 from userbot.events import register
 
 # ================= CONSTANT =================
-DEFAULTUSER = ALIVE_NAME or "Set `ALIVE_NAME` ConfigVar!"
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
 # ============================================
 
 
-@register(outgoing=True, pattern=r"^\.sysd$")
+@register(outgoing=True, pattern="^.sysd$")
 async def sysdetails(sysd):
     """ For .sysd command, get system info using neofetch. """
     if not sysd.text[0].isalpha() and sysd.text[0] not in ("/", "#", "@", "!"):
@@ -34,136 +34,159 @@ async def sysdetails(sysd):
             )
 
             stdout, stderr = await fetch.communicate()
-            result = str(stdout.decode().strip()) + str(stderr.decode().strip())
+            result = str(stdout.decode().strip()) \
+                + str(stderr.decode().strip())
 
             await sysd.edit("`" + result + "`")
         except FileNotFoundError:
-            await sysd.edit("**Install neofetch first!**")
+            await sysd.edit("`Hella install neofetch first kthx`")
 
 
-@register(outgoing=True, pattern=r"^\.botver$")
+@register(outgoing=True, pattern="^.botver$")
 async def bot_ver(event):
     """ For .botver command, get the bot version. """
-    if event.text[0].isalpha() or event.text[0] in ("/", "#", "@", "!"):
-        return
-    if which("git") is not None:
-        ver = await asyncrunapp(
-            "git",
-            "describe",
-            "--all",
-            "--long",
-            stdout=asyncPIPE,
-            stderr=asyncPIPE,
-        )
-        stdout, stderr = await ver.communicate()
-        verout = str(stdout.decode().strip()) + str(stderr.decode().strip())
+    if not event.text[0].isalpha() and event.text[0] not in ("/", "#", "@",
+                                                             "!"):
+        if which("git") is not None:
+            ver = await asyncrunapp(
+                "git",
+                "describe",
+                "--all",
+                "--long",
+                stdout=asyncPIPE,
+                stderr=asyncPIPE,
+            )
+            stdout, stderr = await ver.communicate()
+            verout = str(stdout.decode().strip()) \
+                + str(stderr.decode().strip())
 
-        rev = await asyncrunapp(
-            "git",
-            "rev-list",
-            "--all",
-            "--count",
-            stdout=asyncPIPE,
-            stderr=asyncPIPE,
-        )
-        stdout, stderr = await rev.communicate()
-        revout = str(stdout.decode().strip()) + str(stderr.decode().strip())
+            rev = await asyncrunapp(
+                "git",
+                "rev-list",
+                "--all",
+                "--count",
+                stdout=asyncPIPE,
+                stderr=asyncPIPE,
+            )
+            stdout, stderr = await rev.communicate()
+            revout = str(stdout.decode().strip()) \
+                + str(stderr.decode().strip())
 
-        await event.edit(f"**Userbot:** `{verout}`\n" f"**Revision:** `{revout}`\n")
-    else:
-        await event.edit(
-            "**Shame that you don't have git, you're running v1.0 anyway!**"
-        )
+            await event.edit("`Userbot Version: "
+                             f"{verout}"
+                             "` \n"
+                             "`Revision: "
+                             f"{revout}"
+                             "` \n"
+                             "`OpenUserBot Version: 7.7.7`")
+        else:
+            await event.edit(
+                "Shame that you don't have Git, you're running v1.0 anyway!")
 
 
-@register(outgoing=True, pattern=r"^\.pip(?: |$)(.*)")
+@register(outgoing=True, pattern="^.pip(?: |$)(.*)")
 async def pipcheck(pip):
     """ For .pip command, do a pip search. """
-    if pip.text[0].isalpha() or pip.text[0] in ("/", "#", "@", "!"):
-        return
-    pipmodule = pip.pattern_match.group(1)
-    if pipmodule:
-        await pip.edit("**Searching...**")
-        pipc = await asyncrunapp(
-            "pip3",
-            "search",
-            pipmodule,
-            stdout=asyncPIPE,
-            stderr=asyncPIPE,
-        )
+    if not pip.text[0].isalpha() and pip.text[0] not in ("/", "#", "@", "!"):
+        pipmodule = pip.pattern_match.group(1)
+        if pipmodule:
+            await pip.edit("`Searching . . .`")
+            pipc = await asyncrunapp(
+                "pip3",
+                "search",
+                pipmodule,
+                stdout=asyncPIPE,
+                stderr=asyncPIPE,
+            )
 
-        stdout, stderr = await pipc.communicate()
-        pipout = str(stdout.decode().strip()) + str(stderr.decode().strip())
+            stdout, stderr = await pipc.communicate()
+            pipout = str(stdout.decode().strip()) \
+                + str(stderr.decode().strip())
 
-        if pipout:
-            if len(pipout) > 4096:
-                await pip.edit("**Output too large, sending as file...**")
-                with open("output.txt", "w+") as file:
+            if pipout:
+                if len(pipout) > 4096:
+                    await pip.edit("`Output too large, sending as file`")
+                    file = open("output.txt", "w+")
                     file.write(pipout)
-                await pip.client.send_file(
-                    pip.chat_id,
-                    "output.txt",
-                    reply_to=pip.id,
-                )
-                remove("output.txt")
-                return
-            await pip.edit(
-                "**Query: **\n`"
-                f"pip3 search {pipmodule}"
-                "`\n**Result: **\n`"
-                f"{pipout}"
-                "`"
-            )
+                    file.close()
+                    await pip.client.send_file(
+                        pip.chat_id,
+                        "output.txt",
+                        reply_to=pip.id,
+                    )
+                    remove("output.txt")
+                    return
+                await pip.edit("**Query: **\n`"
+                               f"{invokepip}"
+                               "`\n**Result: **\n`"
+                               f"{pipout}"
+                               "`")
+            else:
+                await pip.edit("**Query: **\n`"
+                               f"{invokepip}"
+                               "`\n**Result: **\n`No Result Returned/False`")
         else:
-            await pip.edit(
-                "**Query: **\n`"
-                f"pip3 search {pipmodule}"
-                "`\n**Result: **\n`No result returned/False`"
-            )
-    else:
-        await pip.edit("**Use .help pip to see an example.**")
+            await pip.edit("`Use .help pip to see an example`")
+            
 
-
-@register(outgoing=True, pattern=r"^\.alive$")
+@register(outgoing=True, pattern="^.alive$")
 async def amireallyalive(alive):
     """ For .alive command, check if the bot is running.  """
-    await alive.edit(
-        "**CheemsBot v1.0 is up and running!**\n\n"
-        f"**Telethon:** {version.__version__}\n"
-        f"**Python:** {python_version()}\n"
-        f"**User:** {DEFAULTUSER}"
-    )
+    logo = ALIVE_LOGO
+    output = ("**𝕮𝖍𝖊𝖊𝖒𝖘𝕭𝖔𝖙 𝕴𝖟 𝕺𝖓𝖑𝖎𝖓𝖊** \n"
+             f"**тєℓєтнση νєяѕιση: {version.__version__}** \n"
+             f"**P̳y̳t̳h̳o̳n̳ ̳v̳e̳r̳s̳i̳o̳n̳: {python_version()}** \n"
+             f"**𒆜ʍʏ օառɛʀ 𒆜: {DEFAULTUSER}** \n"
+             f"**𝐑𝐄𝐏𝐎: [𝕮𝕳𝕰𝕰𝕸𝕾𝕭𝕺𝕿](https://github.com/gamerfuckerofficial/CheemsBot)** \n"
+             f"**ᑕᕼᗩᑎᑎᗴᒪ: [𝕁𝕆𝕀ℕ](https://t.me/Gamerzbots)**")
+    if ALIVE_LOGO:
+        try:
+            logo = ALIVE_LOGO
+            await bot.send_file(alive.chat_id, logo, caption=output)
+            await alive.delete()
+        except BaseException:
+            await alive.edit(output + "\n\n *`The provided logo is invalid."
+                             "\nMake sure the link is directed to the logo picture`")
+    else:
+        await alive.edit(output)            
 
 
-@register(outgoing=True, pattern=r"^\.aliveu")
+
+@register(outgoing=True, pattern="^.aliveu")
 async def amireallyaliveuser(username):
     """ For .aliveu command, change the username in the .alive command. """
     message = username.text
-    if message != ".aliveu" and message[7:8] == " ":
+    output = '.aliveu [new user without brackets] nor can it be empty'
+    if not (message == '.aliveu' or message[7:8] != ' '):
         newuser = message[8:]
         global DEFAULTUSER
         DEFAULTUSER = newuser
-    await username.edit(f"**Successfully changed user to** `{newuser}`**!**")
+        output = 'Successfully changed user to ' + newuser + '!'
+    await username.edit("`" f"{output}" "`")
 
 
-@register(outgoing=True, pattern=r"^\.resetalive$")
+@register(outgoing=True, pattern="^.resetalive$")
 async def amireallyalivereset(ureset):
     """ For .resetalive command, reset the username in the .alive command. """
     global DEFAULTUSER
     DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
-    await ureset.edit("**Successfully reset user for alive!**")
+    await ureset.edit("`" "Successfully reset user for alive!" "`")
 
 
 CMD_HELP.update(
-    {
-        "sysd": ">`.sysd`" "\nUsage: Shows system information using neofetch.",
-        "botver": ">`.botver`" "\nUsage: Shows the userbot version.",
-        "pip": ">`.pip <module(s)>`" "\nUsage: Does a search of pip modules(s).",
-        "alive": ">`.alive`"
-        "\nUsage: Type .alive to see wether your bot is working or not."
-        "\n\n>`.aliveu <text>`"
-        "\nUsage: Changes the 'user' in alive to the text you want."
-        "\n\n>`.resetalive`"
-        "\nUsage: Resets the user to default.",
-    }
-)
+    {"sysd": ".sysd\
+    \nUsage: Shows system information using neofetch."})
+CMD_HELP.update({"botver": ".botver\
+    \nUsage: Shows the userbot version."})
+CMD_HELP.update(
+    {"pip": ".pip <module(s)>\
+    \nUsage: Does a search of pip modules(s)."})
+CMD_HELP.update({
+    "alive":
+    ".alive\
+    \nUsage: Type .alive to see wether your bot is working or not.\
+    \n\n.aliveu <text>\
+    \nUsage: Changes the 'user' in alive to the text you want.\
+    \n\n.resetalive\
+    \nUsage: Resets the user to default."
+})
