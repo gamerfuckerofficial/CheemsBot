@@ -10,8 +10,8 @@ CheemsBot is a modular Telegram userbot running on Python 3.8+ with an SQLAlchem
 <p align="left"><a href="https://heroku.com/deploy?template=https://github.com/gamerfuckerofficial/CheemsBot"> <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy to Heroku" /></a></p>
 ## [Generate session string](https://repl.it/@gamerfuckeroffi/CheemsUserbot)
 
-- [Setup GDrive module](https://telegra.ph/How-To-Setup-Google-Drive-04-03)
-- [Setup Last.FM module](https://telegra.ph/How-to-set-up-LastFM-module-for-Paperplane-userbot-11-02)
+-- [Setup GDrive module](https://telegra.ph/How-To-Setup-Google-Drive-04-03)
+-- [Setup Last.FM module](https://telegra.ph/How-to-set-up-LastFM-module-for-Paperplane-userbot-11-02)
 
 ## Updates and support
 
