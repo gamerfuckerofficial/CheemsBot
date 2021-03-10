@@ -32,7 +32,7 @@ LOGS.info("Your CheemsBot userbot is running!")
 
 LOGS.info(
     "Congratulations, the bot is up and running! Send .help in any chat for more info.\n"
-    "If you need assistance, head to https://t.me/Gamerzbots"
+    "If you need assistance, head to https://t.me/CheemsUserbot"
 )
 
 if len(argv) not in (1, 3, 4):
