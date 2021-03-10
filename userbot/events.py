@@ -96,8 +96,8 @@ def register(**args):
 
                     date = strftime("%Y-%m-%d %H:%M:%S", gmtime())
 
-                    text = "**USERBOT ERROR REPORT**\n"
-                    link = "[Support Chat](https://t.me/Gamerzbots)"
+                    text = "**CHEEMSBOT ERROR REPORT**\n"
+                    link = "[Support Chat](https://t.me/CheemsUserbot)"
                     text += "If you want to, you can report it"
                     text += f"- just forward this message to {link}.\n"
                     text += "I won't log anything except the fact of error and date\n"
@@ -108,7 +108,7 @@ def register(**args):
                     ftext += "you may not report this error if you've "
                     ftext += "any confidential data here, no one will see your data "
                     ftext += "if you choose not to do so.\n\n"
-                    ftext += "--------BEGIN USERBOT TRACEBACK LOG--------"
+                    ftext += "--------BEGIN CHEEMSBOT TRACEBACK LOG--------"
                     ftext += "\nDate: " + date
                     ftext += "\nChat ID: " + str(check.chat_id)
                     ftext += "\nSender ID: " + str(check.sender_id)
@@ -118,7 +118,7 @@ def register(**args):
                     ftext += str(format_exc())
                     ftext += "\n\nError text:\n"
                     ftext += str(sys.exc_info()[1])
-                    ftext += "\n\n--------END USERBOT TRACEBACK LOG--------"
+                    ftext += "\n\n--------END CHEEMSBOT TRACEBACK LOG--------"
 
                     command = 'git log --pretty=format:"%an: %s" -10'
 
