@@ -929,6 +929,10 @@ CMD_HELP.update(
         "\n\n>`.mute <username/reply> <reason (optional)>`"
         "\nUsage: Mutes the person in the chat, works on admins too."
         "\n\n>`.unmute <username/reply>`"
+        "\n\n`.gmute` <username/reply> <reason (optional)>\
+        "\nUsage: Mutes the person in all groups you have in common with them.\
+        "\n\n`.ungmute` <username/reply>\
+        "\nUsage: Reply someone's message with .ungmute to remove them from the gmuted list.\
         "\nUsage: Removes the person from the muted list."
         "\n\n>`.zombies`"
         "\nUsage: Searches for deleted accounts in a group. "
