@@ -401,7 +401,7 @@ CMD_HELP.update({
 "\n\n`.getbot`."
 "\nUsage: Get the Bots in any chat."
 "\n\n`.logit`\
-"\nUsage: Forwards the message you've replied to in your bot logs group."
+"\nUsage: Forwards the message you have replied to in your bot logs group."
 "\n\n`.kickme`."
 "\nUsage: Leave from a targeted group."
 "\n\n`.unmutechat`."
