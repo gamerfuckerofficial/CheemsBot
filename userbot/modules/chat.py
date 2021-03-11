@@ -101,7 +101,7 @@ async def log(log_text):
     await log_text.delete()
 
 
-@register(outgoing=True, pattern="^.kickme$")
+@register(outgoing=True, pattern="^.bye$")
 async def kickme(leave):
     """ Basically it's .kickme command """
     await leave.edit("Master left the chat 😛")
@@ -396,25 +396,25 @@ async def _(event):
 
 CMD_HELP.update({
     "chat":
-    "`.getid`."
-"\nUsage: Get ID of any Telegram media, or any user."
-"\n\n`.getbot`."
-"\nUsage: Get the Bots in any chat."
-"\n\n`.logit`\
-"\nUsage: Forwards the message you have replied to in your bot logs group."
-"\n\n`.kickme`."
-"\nUsage: Leave from a targeted group."
-"\n\n`.unmutechat`."
-"\nUsage: Unmutes a muted chat."
-"\n\n`.mutechat`."
-"\nUsage: Allows you to mute any chat."
-"\n\n`.link` <username/userid> : <optional text> (or) reply to someone's message with .link <optional text>."
-"\nUsage: Generate a permanent link to the user's profile with optional custom text."
-"\n\n`.regexninja` on/off."
-"\nUsage: Globally enable/disables the regex ninja module."
-"\nRegex Ninja module helps to delete the regex bot's triggering messages."
-"\n\n`.chatinfo [optional: <reply/tag/chat id/invite link>]`."
-"\nUsage: Gets info of a chat. Some info might be limited due to missing permissions."
-"\n\n`.invite`\
-"\nUsage: Invites users to a chat, not to a private message."       
+    "`.getid`\
+\nUsage: Get ID of any Telegram media, or any user\
+\n\n`.getbot`\
+\nUsage: Get the Bots in any chat.\
+\n\n`.logit`\
+\nUsage: Forwards the message you've replied to in your bot logs group.\
+\n\n`.bye`\
+\nUsage: Leave from a targeted group.\
+\n\n`.unmutechat`\
+\nUsage: Unmutes a muted chat.\
+\n\n`.mutechat`\
+\nUsage: Allows you to mute any chat.\
+\n\n`.link` <username/userid> : <optional text> (or) reply to someone's message with .link <optional text>\
+\nUsage: Generate a permanent link to the user's profile with optional custom text.\
+\n\n`.regexninja` on/off\
+\nUsage: Globally enable/disables the regex ninja module.\
+\nRegex Ninja module helps to delete the regex bot's triggering messages.\
+\n\n`.chatinfo [optional: <reply/tag/chat id/invite link>]`\
+\nUsage: Gets info of a chat. Some info might be limited due to missing permissions..\
+\n\n`.invite`\
+\nUsage: Invites users to a chat, not to a private message."       
 })
