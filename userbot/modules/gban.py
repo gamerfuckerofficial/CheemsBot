@@ -6,7 +6,6 @@
 
 from userbot import bot, CMD_HELP
 from telethon.tl.functions.contacts import BlockRequest, UnblockRequest
-from userbot.utils import admin_cmd
 import html
 from telethon import events
 from telethon.tl.functions.photos import GetUserPhotosRequest
