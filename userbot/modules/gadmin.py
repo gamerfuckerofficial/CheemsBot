@@ -16,8 +16,8 @@ from telethon.tl.types import ChatBannedRights
 
 import userbot.modules.sql_helper.gban_sql_helper as gban_sql
 
-from userbot import BOTLOG, BOTLOG_CHATID, admin_groups, get_user_from_event
-from .sql_helper.mute_sql import is_muted, mute, unmute
+from userbot import BOTLOG, BOTLOG_CHATID, CMD_HELP
+from userbot.events import register
 
 BANNED_RIGHTS = ChatBannedRights(
     until_date=None,
