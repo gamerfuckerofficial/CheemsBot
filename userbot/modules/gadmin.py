@@ -14,7 +14,7 @@ from telethon.tl.functions.messages import ImportChatInviteRequest
 from telethon.tl.functions.users import GetFullUserRequest
 from telethon.tl.types import ChatBannedRights
 
-import userbot.plugins.sql_helper.gban_sql_helper as gban_sql
+import userbot.modules.sql_helper.gban_sql_helper as gban_sql
 
 from . import BOTLOG, BOTLOG_CHATID, CAT_ID, admin_groups, get_user_from_event
 from .sql_helper.mute_sql import is_muted, mute, unmute
