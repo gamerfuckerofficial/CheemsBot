@@ -1,7 +1,7 @@
 from userbot.modules.sql_helper.mute_sql import is_muted, mute, unmute
 import asyncio
 
-@command(outgoing=True, pattern=r"^.gmute ?(\d+)?")
+@register(outgoing=True, pattern=r"^\.gmute(?: |$)(.*)")
 async def startgmute(event):
     private = False
     if event.fwd_from:
@@ -30,7 +30,7 @@ async def startgmute(event):
     else:
         await event.edit("Successfully gmuted that person")
 
-@command(outgoing=True, pattern=r"^.ungmute ?(\d+)?")
+@register(outgoing=True, pattern=r"^\.ungmute(?: |$)(.*)")
 async def endgmute(event):
     private = False
     if event.fwd_from:
@@ -58,7 +58,7 @@ async def endgmute(event):
     else:
         await event.edit("Successfully ungmuted that person")
 
-@command(outgoing=True, pattern=r"^.gmute ?(\d+)?", allow_sudo=True)
+@register(outgoing=True, pattern=r"^\.gmute(?: |$)(.*)")
 async def startgmute(event):
     private = False
     if event.fwd_from:
@@ -87,7 +87,7 @@ async def startgmute(event):
     else:
         await event.edit("Successfully gmuted that person")
 
-@command(outgoing=True, pattern=r"^.ungmute ?(\d+)?", allow_sudo=True)
+@register(outgoing=True, pattern=r"^\.ungmute(?: |$)(.*)")
 async def endgmute(event):
     private = False
     if event.fwd_from:
@@ -115,7 +115,7 @@ async def endgmute(event):
     else:
         await event.edit("Successfully ungmuted that person")
 
-@command(incoming=True)
+@register(incoming=True)
 async def watcher(event):
     if is_muted(event.sender_id, "gmute"):
         await event.delete()
