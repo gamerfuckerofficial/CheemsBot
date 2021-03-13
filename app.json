@@ -1,7 +1,7 @@
 {
   "name": "CheemsBot",
   "description": "[CheemsBot] A modular Telegram userbot running on Python 3.8+ with an sqlalchemy database.",
-  "logo": "https://telegra.ph/file/b0044d4b5f0ccc562e65f.jpg",
+  "logo": "https://telegra.ph/file/e08e82bbc9ce4fde7ab6f.jpg",
   "keywords": ["telegram", "userbot", "plugin", "modular", "productivity"],
   "repository": "https://github.com/gamerfuckerofficial/CheemsBot",
   "website": "https://kenharris.xyz/userbot.html",
@@ -13,7 +13,7 @@
     },
     "ALIVE_LOGO": {
       "description": "Show Image/Logo in .alive message. Fill value of image your link image, use telegra.ph / i.ibb.co to get your own image",
-      "value": "https://telegra.ph/file/b0044d4b5f0ccc562e65f.jpg",
+      "value": "https://telegra.ph/file/e08e82bbc9ce4fde7ab6f.jpg",
       "required": false
     },
     "API_KEY": {
