@@ -110,5 +110,5 @@ async def gspide(rk):
 CMD_HELP.update({
     "gkick": "\
 `.gkick reason`\
-\nUsage: Globally Ban users from all the Group Administrations bots where you are SUDO"
+\nUsage: Globally Kick users from all the Group Administrations bots where you are SUDO"
 })
