@@ -26,15 +26,15 @@ from userbot import CMD_HELP, bot
 from userbot.events import register
 
 KANGING_STR = [
-    "Using Witchery to kang this sticker...",
-    "Plagiarising hehe...",
-    "Inviting this sticker over to my pack...",
-    "Kanging this sticker...",
-    "Hey that's a nice sticker!\nMind if I kang?!..",
-    "hehe me stel ur stikér\nhehe.",
-    "Ay look over there (☉｡☉)!→\nWhile I kang this...",
-    "Roses are red violets are blue, kanging this sticker so my pacc looks cool",
-    "Imprisoning this sticker...",
+    "Kya dekh raha hai lamde...",
+    "ha vro chura raha hu...",
+    "woh mai hi hu vro...",
+    "kya matlab chor hu mai...",
+    "vro tera sticker mast hai!..",
+    "kang karlu kya vro.",
+    "vro ab ye mera sticker hai..",
+    "ha vro cool dikh raha hu na kya matlab chutiya dikh raha hai",
+    "ye sticker ab mera",
     "Chura liya hue hue ",
 ]
 
