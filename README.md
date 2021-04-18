@@ -2,6 +2,8 @@
 
 ![logo](https://telegra.ph/file/1bf00d74b0f87fbc190d8.jpg)
 
+<div align="center"><img src="./assets/cheems.gif"></div>
+
 ## What is it?
 
 CheemsBot is a modular Telegram userbot running on Python 3.8+ with an SQLAlchemy database.
