@@ -1,5 +1,4 @@
-FROM gamerfuckerofficial/CheemsBot:alpine
-
+FROM kenhv/kensurbot:debian
 RUN git clone -b experimental https://github.com/gamerfuckerofficial/CheemsBot /root/userbot
 RUN chmod 777 /root/userbot
 WORKDIR /root/userbot/
