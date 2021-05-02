@@ -136,7 +136,7 @@ async def amireallyalive(alive):
     output = ("**✦ 𝕮𝖍𝖊𝖊𝖒𝖘𝕭𝖔𝖙 𝕴𝖟 𝕺𝖓𝖑𝖎𝖓𝖊** \n"
              f"**✦ тєℓєтнση νєяѕιση: {version.__version__}** \n"
              f"**✦ P̳y̳t̳h̳o̳n̳ ̳̳v̳e̳r̳s̳i̳o̳n̳🐍: {python_version()}** \n"
-             f"**✦ 𒆜ʍʏ օառɛʀ 𒆜:{DEFAULTUSER}** \n"
+             f"**✦ 𒆜ʍʏ օառɛʀ 𒆜:[{name0}](tg://user?id={uid})** \n"
              f"**✦ 𝐑𝐄𝐏𝐎: [ĆĦ€€ΜŞβØŦ](https://github.com/gamerfuckerofficial/CheemsBot)** \n"
              f"**✦ [ᑕᕼᗩᑎᑎᗴᒪ](https://t.me/CheemsUserbot): [ᘜ尺ㄖㄩ卩](https://t.me/CheemsBotChat)**")
     if ALIVE_LOGO:
