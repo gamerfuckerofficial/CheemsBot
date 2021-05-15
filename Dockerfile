@@ -1,5 +1,8 @@
-FROM kenhv/kensurbot:debian
-RUN git clone -b experimental https://github.com/gamerfuckerofficial/CheemsBot /root/userbot
+git fetch origin
+
+git checkout -b experimental origin/experimental
+
+git merge Master
 RUN chmod 777 /root/userbot
 WORKDIR /root/userbot/
 
