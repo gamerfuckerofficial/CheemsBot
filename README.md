@@ -14,7 +14,7 @@ CheemsBot is a modular Telegram userbot running on Python 3.8+ with an SQLAlchem
 
 # String Session
 ### Repl 🧨
-[![Run on Repl.it](https://repl.it/@gamerfuckeroffi/CheemsUserbot)]
+[![Run on Repl.it](https://replit.com/badge/github/gamerfuckerofficial/CheemsBot)](https://repl.it/@gamerfuckeroffi/CheemsUserbot)
 
 - [Setup GDrive module](https://telegra.ph/How-To-Setup-Google-Drive-04-03)
 - [Setup Last.FM module](https://telegra.ph/How-to-set-up-LastFM-module-for-Paperplane-userbot-11-02)
