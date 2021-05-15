@@ -1,11 +1,9 @@
-git fetch origin
+FROM kenhv/kensurbot:debian
 
-git checkout -b experimental origin/experimental
+RUN set -ex \
+    && git clone -b master https://github.com/gamerfuckerofficial/CheemsBot /root/userbot \
+    && chmod 777 /root/userbot
 
-git merge Master
-RUN chmod 777 /root/userbot
 WORKDIR /root/userbot/
 
-EXPOSE 80 443
-
-CMD ["python3","-m","userbot"]
+CMD ["python3", "-m", "userbot"]
