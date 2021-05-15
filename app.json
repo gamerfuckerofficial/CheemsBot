@@ -123,6 +123,7 @@
     },
     "DEFAULT_BIO": {
       "description": "Default profile bio.",
+      "value": 
       "required": false
     },
     "G_DRIVE_DATA": {
