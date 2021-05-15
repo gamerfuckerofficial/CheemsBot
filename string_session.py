@@ -21,7 +21,7 @@ API_HASH = input("Enter API_HASH (the longer one): ")
 with TelegramClient(StringSession(), API_KEY, API_HASH) as client:
     print("Check your Saved Messages in Telegram!")
     session_string = client.session.save()
-    saved_messages_template = """Support: @Gamerzbots
+    saved_messages_template = """Support: @CheemsUserbot
 
 <code>STRING_SESSION</code>: <code>{}</code>
 

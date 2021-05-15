@@ -1,6 +1,8 @@
-FROM kenhv/kensurbot:alpine
+git fetch origin
 
-RUN git clone -b Master https://github.com/gamerfuckerofficial/CheemsBot /root/userbot
+git checkout -b experimental origin/experimental
+
+git merge Master
 RUN chmod 777 /root/userbot
 WORKDIR /root/userbot/
 
