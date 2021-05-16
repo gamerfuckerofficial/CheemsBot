@@ -1,4 +1,4 @@
-FROM kenhv/kensurbot:alpine
+FROM kenhv/kensurbot:debian
 
 RUN git clone -b Master https://github.com/gamerfuckerofficial/CheemsBot /root/userbot
 RUN chmod 777 /root/userbot
