@@ -1,9 +1,9 @@
-FROM kenhv/kensurbot:debian
+FROM kenhv/kensurbot:alpine
 
-RUN set -ex \
-    && git clone -b master https://github.com/gamerfuckerofficial/CheemsBot /root/userbot \
-    && chmod 777 /root/userbot
-
+RUN git clone -b Master https://github.com/gamerfuckerofficial/CheemsBot /root/userbot
+RUN chmod 777 /root/userbot
 WORKDIR /root/userbot/
 
-CMD ["python3", "-m", "userbot"]
+EXPOSE 80 443
+
+CMD ["python3","-m","userbot"]
