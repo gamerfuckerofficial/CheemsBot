@@ -1,6 +1,6 @@
 FROM kenhv/kensurbot:debian
 
-RUN git clone -b Master https://github.com/gamerfuckerofficial/CheemsBot /root/userbot
+RUN git clone -b master https://github.com/gamerfuckerofficial/CheemsBot /root/userbot
 RUN chmod 777 /root/userbot
 WORKDIR /root/userbot/
 
