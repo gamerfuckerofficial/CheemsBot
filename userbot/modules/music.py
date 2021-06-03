@@ -127,7 +127,7 @@ async def _(event):
     await catmusic(str(query), "320k", event)
     l = glob.glob("./temp/*.mp3")
     if l:
-        await event.edit("yeah..! i found something wait")
+        await event.edit("yeah..! i found something wi8..🥰")
     else:
         await event.edit(f"Sorry..! i can't find anything with `{query}`")
         return
@@ -336,5 +336,4 @@ CMD_HELP.update({
             \nFormat= `FLAC`, `MP3_320`, `MP3_256`, `MP3_128`.\
             \n\nGuide:Video guide of arl token: [here](https://www.youtube.com/watch?v=O6PRT47_yds&feature=youtu.be) or Read [This](https://notabug.org/RemixDevs/DeezloaderRemix/wiki/Login+via+userToken)."
 })
-
 
