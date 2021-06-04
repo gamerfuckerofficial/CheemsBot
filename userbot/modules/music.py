@@ -25,7 +25,6 @@ from telethon.tl.types import DocumentAttributeAudio, DocumentAttributeVideo
 
 from userbot import (
     CMD_HELP,
-    DEEZER_ARL_TOKEN,
     GOOGLE_CHROME_BIN,
     LASTFM_USERNAME,
     TEMP_DOWNLOAD_DIRECTORY,
